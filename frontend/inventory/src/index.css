@@ -1,0 +1,96 @@
+
+@import "tailwindcss";
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #F3F4F6;
+}
+
+/* Layout */
+.dashboard {
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+.input {
+  padding: 10px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+/* Buttons */
+.btn {
+  background: #4F46E5;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-success {
+  background: #22C55E;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background: #4F46E5;
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat-card.green {
+  background: #22C55E;
+}
+
+.stat-card.orange {
+  background: #F59E0B;
+}
+
+@layer components {
+  .card {
+    @apply bg-white/70 backdrop-blur-md shadow-lg rounded-2xl p-5 border border-gray-200;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:scale-105 transition;
+  }
+
+  .btn-danger {
+    @apply bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 transition;
+  }
+
+  .btn-success {
+    @apply bg-green-500 text-white px-3 py-1 rounded-lg hover:bg-green-600 transition;
+  }
+}
